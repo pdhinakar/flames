@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>FLAMES</title>
+		<script type='text/javascript' src='main.js'></script> 
+	<style>
+div{
+      width:40%;
+      height: 10%;
+      margin: auto;
+      margin-top: 2%;
+      margin-bottom: 1%;
+    }
+    h1{
+      color:white;
+      text-align: center;
+    }
+    h3{
+      color:white;
+      text-align: center;
+    }
+    button{
+      color:black;
+      text-align: center;
+    }
+	</style>
+	</head>
+	<body background="black.jpg">
+		<div>
+   			 <form name=first>
+          <fieldset >
+  <legend><h2 style="color:white;"><i>FLAMES</i></h2></legend>
+  <table align="center">
+  <form name="flames">
+<tr><td><label><h3><i>YOUR NAME</i></h3></label></td></tr>
+          <tr><td><input value='' name=name onkeyup=checnum(this) type=text class='txt' id='yname'>
+</td></tr>
+        <tr><td><br>
+          <h3><i>CRUSH NAME</i></h3></td></tr>
+          <tr><td>
+           <input value='' name=name1 onkeyup=checnum(this) type=text class='txt' id='pname'>
+        </td></tr>
+                    <tr><td>
+                    <br><br>
+                    <input name=calculate type=button value=FLAMES onclick=calc() class='buttonMini'></td><td>
+                    <br><br>
+                    <input type=reset value=RESET onclick='clear_all()' class='buttonMini'></td>
+
+ </form></table><br></fieldset>
+ <br><br><fieldset><legend><h3><i>RELATIONSHIP</i></legend><br>
+  <div name=n1 id=nam1></div>
+          <div style='font-weight:bold;' id='msg'></div>
+                </div>
+                <div class='but_por'>
+
+			<span  align='center' style="font-size: 10px;color: #dadada;" id="dumdiv">
+            </span>
+                </div>
+            </div> 
+    
+            <div id='tablid' class='clearfix'>
+                <div class='group' align='center'>
+                    <div class='love_result'>
+                        <span name=n1 id=nam1></span>
+                    </div>
+                </div>
+            </div>
+   
+</div><br></fieldset>
+</body>
+</html>
