@@ -1,14 +1,3 @@
-function checnum(as)
-{
-    var dd = as.value;
-
-                if(!isNaN(dd))
-                {
-                    dd = dd.substring(0,(dd.length-1));
-                    as.value = dd;
-                }   
-}
-
 function calc() 
 {
     var fname = document.getElementById('yname').value;
@@ -32,7 +21,6 @@ function calc()
             second = second.replace(r,"");  
             if(second != "")
             {
-                document.getElementById("tablid").style.display = 'block';
                     for(var xx=0; xx<first.length; xx++)
                     {
                             for(var yy=0; yy<second.length; yy++)
