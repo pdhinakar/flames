@@ -2,14 +2,8 @@ function calc()
 {
     var fname = document.getElementById('yname').value;
     var sname = document.getElementById('pname').value;
-    if (fname=='') {
-        alert("Please Enter Your Name");
-    }
-    else if (sname=='') {
-        alert("Please Enter Crush Name");
-    }
-    var yrname = fname;
-    var csname = sname;
+    var yrname = document.getElementById('yname').value;
+    var csname = document.getElementById('pname').value;
     var r = /\s+/g;
     var orfirst = document.first.name.value.toUpperCase();
     var nam=orfirst;
