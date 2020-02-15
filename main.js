@@ -8,6 +8,8 @@ function calc()
     else if (sname=='') {
         alert("Please Enter Crush Name");
     }
+    var yrname = fname;
+    var csname = sname;
     var r = /\s+/g;
     var orfirst = document.first.name.value.toUpperCase();
     var nam=orfirst;
@@ -61,32 +63,32 @@ function calc()
                   
                     if(ar=="F")
                     {
-                            document.getElementById("msg").innerHTML = 'FRIENDS';
+                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'FRIENDS';
                             document.getElementById("msg").style.color='white';                  
                     }
                     else if(ar=="L")
                     {
-                            document.getElementById("msg").innerHTML = 'LOVER';
+                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'LOVER';
                             document.getElementById("msg").style.color='white';
                     }
                     else if(ar=="A")
                     {
-                            document.getElementById("msg").innerHTML = 'AFFECTION';
+                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'AFFECTION';
                             document.getElementById("msg").style.color='white';
                     } 
                     else if(ar=="M")
                     {
-                            document.getElementById("msg").innerHTML = 'MARRIAGE';
+                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'MARRIAGE';
                             document.getElementById("msg").style.color='white';
                     }
                     else if(ar=="E")
                     {   
-                            document.getElementById("msg").innerHTML = 'ENEMY';
+                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'ENEMY';
                             document.getElementById("msg").style.color='white';
                     }
                     else if(ar=="S")
                     {
-                            document.getElementById("msg").innerHTML = 'SIBLING';
+                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'SIBLING';
                             document.getElementById("msg").style.color='white';
                     }                   
             }        
