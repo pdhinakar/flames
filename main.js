@@ -1,94 +1,65 @@
-function calc() 
-{
-    var fname = document.getElementById('yname').value;
-    var sname = document.getElementById('pname').value;
-    var yrname = document.getElementById('yname').value;
-    var csname = document.getElementById('pname').value;
-    var r = /\s+/g;
-    var orfirst = document.first.name.value.toUpperCase();
-    var nam=orfirst;
-    orfirst = orfirst.replace(r,"");
-    if(orfirst!="")
-    {
-            var count = 0;
-            var first = orfirst;    
-            second = eval("document.first.name"+1).value.toUpperCase();
-            var names=second;
-            second = second.replace(r,"");  
-            if(second != "")
-            {
-                    for(var xx=0; xx<first.length; xx++)
-                    {
-                            for(var yy=0; yy<second.length; yy++)
-                            {
-                                    if(first[xx] == second[yy])
-                                    {
-                                            var a1 = first.substring(0,xx);
-                                            var a2 = first.substring(xx+1,first.length);
-                                            first = a1+a2;
-                                            xx=-1;
-                                            var b1 = second.substring(0,yy);
-                                            var b2 = second.substring(yy+1,second.length);
-                                            second = b1+b2;
-                                            yy=-1;
-                                            break;
-                                    }
-                            }
-                    }          
-                    var ss=(first+second);
-                    var l=ss.length;
-                    var ar = new Array("F", "L", "A", "M", "E", "S");
-                    var stp=1;
-            
-                    for(var x=6; x>1; x--)
-                    {
-                            var g=((l%x)+stp)-1;
-                            if(g>x)
-                            {
-                                    g=g%x;
-                            }
-                            if(g==0)
-                            {
-                                    g=ar.length;
-                            }
-                            ar.splice(g-1,1);
-                            stp=g;
-                    }
-                  
-                    if(ar=="F")
-                    {
-                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'FRIENDS';
-                            document.getElementById("msg").style.color='white';                  
-                    }
-                    else if(ar=="L")
-                    {
-                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'LOVER';
-                            document.getElementById("msg").style.color='white';
-                    }
-                    else if(ar=="A")
-                    {
-                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'AFFECTION';
-                            document.getElementById("msg").style.color='white';
-                    } 
-                    else if(ar=="M")
-                    {
-                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'MARRIAGE';
-                            document.getElementById("msg").style.color='white';
-                    }
-                    else if(ar=="E")
-                    {   
-                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'ENEMY';
-                            document.getElementById("msg").style.color='white';
-                    }
-                    else if(ar=="S")
-                    {
-                            document.getElementById("msg").innerHTML = yrname 'and' csname 'are' 'SIBLING';
-                            document.getElementById("msg").style.color='white';
-                    }                   
-            }        
-    }
-    else
-    {
-            return false;
-    }
-}
+function calc(){
+              var ans;
+             var count=0;
+		var flame="flames";
+		 var name1 = document.getElementById("name1").value;
+                 var name2 = document.getElementById("name2").value;
+var i;
+var j;
+                       for(i=0;i<name1.length;i++){
+			for(j=0;j<name2.length;j++){
+				if(name1.charAt(i)==name2.charAt(j)){
+                                name1=name1.substring(0,i)+name1.substring(i+1,name1.length);
+                                name2=name2.substring(0,j)+name2.substring(j+1,name2.length);
+					i--;
+					break;
+				}
+			}
+		}
+
+count=name1.length+name2.length;
+
+		var len=6;
+		var count1=count;
+		while(flame.length!=1){
+			if(count1>len){
+				count=count1%len;
+			
+			}
+			if(count==0){
+				flame=flame.substring(0,len-1);
+			}
+			else{
+			flame=flame.substring(count)+flame.substring(0,count-1);
+			}
+			len--;
+		}
+		switch(flame.charAt(0)){
+		case 'f':
+            alert("Relationship = Friends");
+			ans="Friends";
+		    break;
+		case 'l':
+                        alert("Relationship = Love");
+			ans="Love";
+		    break;
+		case 'a':
+                        alert("Relationship = Affection");
+			ans="Affection";
+		    break;
+		case 'm':
+                        alert("Relationship = Marriage");
+			ans="Marriage";
+		    break;
+		case 'e':
+alert("Relationship = Enemy");
+			ans="Enemy";
+		    break;
+		case 's':
+alert("Relationship =Sister");
+			ans="Sister";
+		    break;
+		}
+//ans="hai";
+document.getElementById("demo").innerHTML=ans;
+} 
