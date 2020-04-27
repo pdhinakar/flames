@@ -36,27 +36,21 @@ count=name1.length+name2.length;
 		}
 		switch(flame.charAt(0)){
 		case 'f':
-            alert("Relationship = Friends");
 			ans="Friends";
 		    break;
 		case 'l':
-                        alert("Relationship = Love");
 			ans="Love";
 		    break;
 		case 'a':
-                        alert("Relationship = Affection");
 			ans="Affection";
 		    break;
 		case 'm':
-                        alert("Relationship = Marriage");
 			ans="Marriage";
 		    break;
 		case 'e':
-alert("Relationship = Enemy");
 			ans="Enemy";
 		    break;
 		case 's':
-alert("Relationship =Sister");
 			ans="Sister";
 		    break;
 		}
